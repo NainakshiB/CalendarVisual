@@ -1,573 +1,855 @@
 {
-    "dataRoles": [
-        {
-            "displayName": "Start date",
-            "name": "StartDate",
-            "kind": "Grouping"
-        },
-        {
-            "displayName": "End date",
-            "name": "EndDate",
-            "kind": "Grouping"
-        },
-        {
-            "displayName": "Events",
-            "name": "events",
-            "kind": "Grouping"
-        },
-        {
-            "displayName": "Event group",
-            "name": "EventGroup",
-            "kind": "Grouping"
-        },
-        {
-            "displayName": "Tooltip",
-            "name": "description",
-            "kind": "Grouping"
-        }
-    ],
-    "objects": {
-        "caption":{
-           "displayName": "Caption Value",
-           "properties":{
-               "captionValue":{
-                   "displayName": "Caption Value",
-                   "description": "Caption Value",
-                   "type":{
-                       "text": true
-                   }
-               }
-            }
-        },
-        "legend": {
-            "displayName": "Legend",
-            "description": "Formatting properties for legends",
-            "properties": {
-                "show": {
-                    "displayName": "Show",
-                    "type": {
-                        "bool": true
-                    }
-                },
-                "position": {
-                    "displayName": "Position",
-                    "description": "Select the position for the legend",
-                    "type": {
-                        "enumeration": [
-                            {
-                                "value": "Top",
-                                "displayName": "Top"
-                            },
-                            {
-                                "value": "Bottom",
-                                "displayName": "Bottom"
-                            }
-                        ]
-                    }
-                },
-                "labelColor": {
-                    "displayName": "Label color",
-                    "type": {
-                        "fill": {
-                            "solid": {
-                                "color": true
-                            }
-                        }
-                    }
-                },
-                "fontSize": {
-                    "displayName": "Legend text size",
-                    "type": {
-                        "formatting": {
-                            "fontSize": true
-                        }
-                    }
-                }
-            }
-        },
-        "colorSelector": {
-            "displayName": "Data colors",
-            "description": "Data color options for events",
-            "properties": {
-                "fillColor": {
-                    "displayName": "Fill",
-                    "type": {
-                        "fill": {
-                            "solid": {
-                                "color": true
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        "events": {
-            "displayName": "Events",
-            "description": "Display formatting properties for events",
-            "properties": {
-                "fontColor": {
-                    "displayName": "Font color",
-                    "type": {
-                        "fill": {
-                            "solid": {
-                                "color": true
-                            }
-                        }
-                    }
-                },
-                "borderColor": {
-                    "displayName": "Border color",
-                    "type": {
-                        "fill": {
-                            "solid": {
-                                "color": true
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        "buttons":{
-            "displayName": "Views",
-            "description": "Settings to show or hide 'week', 'day' and 'list' button",
-            "properties": {
-                "month": {
-                    "displayName": "Show month view",
-                    "type": {
-                        "bool":true
-                    }
-                },
-                "week": {
-                    "displayName": "Show week view",
-                    "type": {
-                        "bool":true
-                    }
-                },
-                "day": {
-                    "displayName": "Show day view",
-                    "type": {
-                        "bool":true
-                    }
-                },
-                "list": {
-                    "displayName": "Show list view",
-                    "type": {
-                        "bool":true
-                    }
-                }
-            }
-        },
-        "workHours":{
-            "displayName": "Work hours",
-            "description": "Settings to set work hours for 'week' and 'day' view.",
-            "properties": {
-                "startTime": {
-                    "displayName": "Start time",
-                    "description": "Select start time",
-                    "type": {
-                        "enumeration": [
-                            {
-                                "value": "01:00",
-                                "displayName": "01:00 AM"
-                            },
-                            {
-                                "value": "02:00",
-                                "displayName": "02:00 AM"
-                            },
-                            {
-                                "value": "03:00",
-                                "displayName": "03:00 AM"
-                            },
-                            {
-                                "value": "04:00",
-                                "displayName": "04:00 AM"
-                            },
-                            {
-                                "value": "05:00",
-                                "displayName": "05:00 AM"
-                            },
-                            {
-                                "value": "06:00",
-                                "displayName": "06:00 AM"
-                            },
-                            {
-                                "value": "07:00",
-                                "displayName": "07:00 AM"
-                            },
-                            {
-                                "value": "08:00",
-                                "displayName": "08:00 AM"
-                            },
-                            {
-                                "value": "09:00",
-                                "displayName": "09:00 AM"
-                            },
-                            {
-                                "value": "10:00",
-                                "displayName": "10:00 AM"
-                            },
-                            {
-                                "value": "11:00",
-                                "displayName": "11:00 AM"
-                            },
-                            {
-                                "value": "12:00",
-                                "displayName": "12:00 PM"
-                            },
-                            {
-                                "value": "13:00",
-                                "displayName": "01:00 PM"
-                            },
-                            {
-                                "value": "14:00",
-                                "displayName": "02:00 PM"
-                            },
-                            {
-                                "value": "15:00",
-                                "displayName": "03:00 PM"
-                            },
-                            {
-                                "value": "16:00",
-                                "displayName": "04:00 PM"
-                            },
-                            {
-                                "value": "17:00",
-                                "displayName": "05:00 PM"
-                            },
-                            {
-                                "value": "18:00",
-                                "displayName": "06:00 PM"
-                            },
-                            {
-                                "value": "19:00",
-                                "displayName": "07:00 PM"
-                            },
-                            {
-                                "value": "20:00",
-                                "displayName": "08:00 PM"
-                            },
-                            {
-                                "value": "21:00",
-                                "displayName": "09:00 PM"
-                            },
-                            {
-                                "value": "22:00",
-                                "displayName": "10:00 PM"
-                            },
-                            {
-                                "value": "23:00",
-                                "displayName": "11:00 PM"
-                            },
-                            {
-                                "value": "00:00",
-                                "displayName": "12:00 AM"
-                            }
-                        ]
-                    }
-                },
-                "endTime": {
-                    "displayName": "End time",
-                    "description": "Select end time",
-                    "type": {
-                        "enumeration": [
-                            {
-                                "value": "01:00",
-                                "displayName": "01:00 AM"
-                            },
-                            {
-                                "value": "02:00",
-                                "displayName": "02:00 AM"
-                            },
-                            {
-                                "value": "03:00",
-                                "displayName": "03:00 AM"
-                            },
-                            {
-                                "value": "04:00",
-                                "displayName": "04:00 AM"
-                            },
-                            {
-                                "value": "05:00",
-                                "displayName": "05:00 AM"
-                            },
-                            {
-                                "value": "06:00",
-                                "displayName": "06:00 AM"
-                            },
-                            {
-                                "value": "07:00",
-                                "displayName": "07:00 AM"
-                            },
-                            {
-                                "value": "08:00",
-                                "displayName": "08:00 AM"
-                            },
-                            {
-                                "value": "09:00",
-                                "displayName": "09:00 AM"
-                            },
-                            {
-                                "value": "10:00",
-                                "displayName": "10:00 AM"
-                            },
-                            {
-                                "value": "11:00",
-                                "displayName": "11:00 AM"
-                            },
-                            {
-                                "value": "12:00",
-                                "displayName": "12:00 PM"
-                            },
-                            {
-                                "value": "13:00",
-                                "displayName": "01:00 PM"
-                            },
-                            {
-                                "value": "14:00",
-                                "displayName": "02:00 PM"
-                            },
-                            {
-                                "value": "15:00",
-                                "displayName": "03:00 PM"
-                            },
-                            {
-                                "value": "16:00",
-                                "displayName": "04:00 PM"
-                            },
-                            {
-                                "value": "17:00",
-                                "displayName": "05:00 PM"
-                            },
-                            {
-                                "value": "18:00",
-                                "displayName": "06:00 PM"
-                            },
-                            {
-                                "value": "19:00",
-                                "displayName": "07:00 PM"
-                            },
-                            {
-                                "value": "20:00",
-                                "displayName": "08:00 PM"
-                            },
-                            {
-                                "value": "21:00",
-                                "displayName": "09:00 PM"
-                            },
-                            {
-                                "value": "22:00",
-                                "displayName": "10:00 PM"
-                            },
-                            {
-                                "value": "23:00",
-                                "displayName": "11:00 PM"
-                            },
-                            {
-                                "value": "00:00",
-                                "displayName": "12:00 AM"
-                            }
-                        ]
-                    }
-                }
-            }
-        },
-        "workDays":{
-            "displayName": "Work week",
-            "description": "Set active work days",
-            "properties": {
-                "weekdayMonday": {
-                    "displayName": "Monday",
-                    "type": {
-                        "bool":true
-                    }
-                },
-                "weekdayTuesday": {
-                    "displayName": "Tuesday",
-                    "type": {
-                        "bool":true
-                    }
-                },
-                "weekdayWednesday": {
-                    "displayName": "Wednesday",
-                    "type": {
-                        "bool":true
-                    }
-                },
-                "weekdayThursday": {
-                    "displayName": "Thursday",
-                    "type": {
-                        "bool":true
-                    }
-                },
-                "weekdayFriday": {
-                    "displayName": "Friday",
-                    "type": {
-                        "bool":true
-                    }
-                },
-                "weekendSaturday": {
-                    "displayName": "Saturday",
-                    "type": {
-                        "bool":true
-                    }
-                },
-                "weekendSunday": {
-                    "displayName": "Sunday",
-                    "type": {
-                        "bool":true
-                    }
-                }
-            }
-        },
-        "calendarSettings":{
-            "displayName": "Calendar settings",
-            "description": "General calendar settings",
-            "properties": {
-                "startingWeekDay": {
-                    "displayName": "Start week on",
-                    "description": "Select week name to set start day of the week",
-                    "type": {
-                        "enumeration": [ 
-                            {
-                                "value": "Monday",
-                                "displayName": "Monday"
-                            },
-                            {
-                                "value": "Tuesday",
-                                "displayName": "Tuesday"
-                            },
-                            {
-                                "value": "Wednesday",
-                                "displayName": "Wednesday"
-                            },
-                            {
-                                "value": "Thursday",
-                                "displayName": "Thursday"
-                            },
-                            {
-                                "value": "Friday",
-                                "displayName": "Friday"
-                            },
-                            {
-                                "value": "Saturday",
-                                "displayName": "Saturday"
-                            },
-                            {
-                                "value": "Sunday",
-                                "displayName": "Sunday"
-                            }
-                        ]
-                    }
-                },
-                "currentTimeLine": {
-                    "displayName": "Show current time",
-                    "description": "Show current time line for 'day' and 'week' view",
-                    "type": {
-                        "bool":true
-                    }
-                },
-                "navLink": {
-                    "displayName": "Enable navigation link",
-                    "description": "Click on 'dates' or 'week Number' to navigate to day or week",
-                    "type": {
-                        "bool":true
-                    }
-                },
-                "weekNumber": {
-                    "displayName": "Show week numbers",
-                    "description": "Display week number",
-                    "type": {
-                        "bool":true
-                    }
-                },
-                "rtl": {
-                    "displayName": "Enable right-to-left layout",
-                    "description": "Display calendar orientation from right to left",
-                    "type": {
-                        "bool":true
-                    }
-                }
-            }
-        },
-        "persistCalendarView": {
-            "displayName": "View",
-            "properties": {
-                "calendarView": {
-                    "displayName": "Persisted view",
-                    "description": "Persist calendar view",
-                    "type": {
-                        "text":true
-                    }
-                }
-            }
-        },
-        "persistCalendarDate": {
-            "displayName": "Date",
-            "properties": {
-                "persistedDate": {
-                    "displayName": "Persisted date",
-                    "description": "Persist calendar date",
-                    "type": {
-                        "text":true
-                    }
-                }
-            }
-        }
+  "dataRoles": [
+    {
+      "displayName": "Start date",
+      "name": "StartDate",
+      "kind": "Grouping"
     },
-    "dataViewMappings": [
-        {
-            "conditions": [
-                {
-                    "StartDate": {
-                        "max": 1
-                    },
-                    "EndDate": {
-                        "max": 1
-                    },
-                    "events": {
-                        "max": 1
-                    },
-                    "EventGroup": {
-                        "max": 1
-                    },
-                    "description": {
-                    }
-                }
-            ],
-            "categorical": {
-                "categories": {
-                    "select": [
-                            {
-                                "for": {
-                                    "in": "StartDate"
-                                }
-                            },
-                            {
-                                "for": {
-                                    "in": "EndDate"
-                                }
-                            },
-                            {
-                                "for": {
-                                    "in": "events"
-                                }
-                            },
-                            {
-                                "for": {
-                                    "in": "EventGroup"
-                                }
-                            },
-                            {
-                                "for": {
-                                    "in": "description"
-                                }
-                            }
-                    ],
-                    "dataReductionAlgorithm": {
-                        "top": {}
-                    }
-                }
-            }
+    {
+      "displayName": "End date",
+      "name": "EndDate",
+      "kind": "Grouping"
+    },
+    {
+      "displayName": "Events",
+      "name": "events",
+      "kind": "Grouping"
+    },
+    {
+      "displayName": "Event group",
+      "name": "EventGroup",
+      "kind": "Grouping"
+    },
+    {
+      "displayName": "Event URL",
+      "name": "EventURL",
+      "kind": "Grouping"
+    },
+    {
+      "displayName": "Tooltip",
+      "name": "description",
+      "kind": "Grouping"
+    }
+  ],
+  "objects": {
+    "caption": {
+      "displayName": "Caption value",
+      "properties": {
+        "captionValue": {
+          "displayName": "Caption Value",
+          "description": "Caption Value",
+          "type": {
+            "text": true
+          }
         }
+      }
+    },
+    "legend": {
+      "displayName": "Legend",
+      "description": "Formatting properties for legends",
+      "properties": {
+        "show": {
+          "displayName": "Show",
+          "type": {
+            "bool": true
+          }
+        },
+        "position": {
+          "displayName": "Position",
+          "description": "Select the position for the legend",
+          "type": {
+            "enumeration": [
+              {
+                "value": "Top",
+                "displayName": "Top"
+              },
+              {
+                "value": "Bottom",
+                "displayName": "Bottom"
+              }
+            ]
+          }
+        },
+        "labelColor": {
+          "displayName": "Label color",
+          "description": "Select the label color for the legend",
+          "type": {
+            "fill": {
+              "solid": {
+                "color": true
+              }
+            }
+          }
+        },
+        "fontSize": {
+          "displayName": "Legend text size",
+          "description": "Font size for legend",
+          "type": {
+            "formatting": {
+              "fontSize": true
+            }
+          }
+        },
+        "fontFamily": {
+          "displayName": "Font family",
+          "description": "Select the font-family for data labels",
+          "type": {
+            "enumeration": [
+              {
+                "value": "Arial",
+                "displayName": "Arial",
+                "font-family": "Arial"
+              },
+              {
+                "value": "Arial Black",
+                "displayName": "Arial Black",
+                "font-family": "Arial Black"
+              },
+              {
+                "value": "Arial Unicode MS",
+                "displayName": "Arial Unicode MS",
+                "font-family": "Arial Unicode MS"
+              },
+              {
+                "value": "Calibri",
+                "displayName": "Calibri"
+              },
+              {
+                "value": "Cambria",
+                "displayName": "Cambria"
+              },
+              {
+                "value": "Cambria Math",
+                "displayName": "Cambria Math"
+              },
+              {
+                "value": "Candara",
+                "displayName": "Candara"
+              },
+              {
+                "value": "Comic Sans MS",
+                "displayName": "Comic Sans MS",
+                "font-family": "Comic Sans MS"
+              },
+              {
+                "value": "Consolas",
+                "displayName": "Consolas"
+              },
+              {
+                "value": "Constantia",
+                "displayName": "Constantia"
+              },
+              {
+                "value": "Corbel",
+                "displayName": "Corbel"
+              },
+              {
+                "value": "Courier New",
+                "displayName": "Courier New"
+              },
+              {
+                "value": "Georgia",
+                "displayName": "Georgia"
+              },
+              {
+                "value": "Lucida Sans Unicode",
+                "displayName": "Lucida Sans Unicode"
+              },
+              {
+                "value": "Segoe (Bold)",
+                "displayName": "Segoe (Bold)"
+              },
+              {
+                "value": "Segoe UI",
+                "displayName": "Segoe UI"
+              },
+              {
+                "value": "Segoe UI Light",
+                "displayName": "Segoe UI Light"
+              },
+              {
+                "value": "Symbol",
+                "displayName": "Symbol"
+              },
+              {
+                "value": "Tahoma",
+                "displayName": "Tahoma"
+              },
+              {
+                "value": "Times New Roman",
+                "displayName": "Times New Roman"
+              },
+              {
+                "value": "Trebuchet MS",
+                "displayName": "Trebuchet MS"
+              },
+              {
+                "value": "Verdana",
+                "displayName": "Verdana"
+              },
+              {
+                "value": "Wingdings",
+                "displayName": "Wingdings"
+              }
+            ]
+          }
+        }
+      }
+    },
+
+    "url": {
+      "displayName": "URL navigate",
+      "description": "Enable URL navigation",
+      "properties": {
+        "show": {
+          "displayName": "Show",
+          "type": {
+            "bool": true
+          }
+        }
+      }
+    },
+    "colorSelector": {
+      "displayName": "Data colors",
+      "description": "Data color options for events",
+      "properties": {
+        "fillColor": {
+          "displayName": "Fill",
+          "type": {
+            "fill": {
+              "solid": {
+                "color": true
+              }
+            }
+          }
+        }
+      }
+    },
+    "events": {
+      "displayName": "Events",
+      "description": "Display formatting properties for events",
+      "properties": {
+        "fontColor": {
+          "displayName": "Font color",
+          "type": {
+            "fill": {
+              "solid": {
+                "color": true
+              }
+            }
+          }
+        },
+        "borderColor": {
+          "displayName": "Border color",
+          "description": "Border color for events",
+          "type": {
+            "fill": {
+              "solid": {
+                "color": true
+              }
+            }
+          }
+        },
+        "fontSize": {
+          "displayName": "Text Size",
+          "description": "Text size is based on the length of the visual",
+          "type": {
+            "formatting": {
+              "fontSize": true
+            }
+          }
+        },
+        "fontFamily": {
+          "displayName": "Font family",
+          "description": "Select the font-family for data labels",
+          "type": {
+            "enumeration": [
+              {
+                "value": "Arial",
+                "displayName": "Arial",
+                "font-family": "Arial"
+              },
+              {
+                "value": "Arial Black",
+                "displayName": "Arial Black",
+                "font-family": "Arial Black"
+              },
+              {
+                "value": "Arial Unicode MS",
+                "displayName": "Arial Unicode MS",
+                "font-family": "Arial Unicode MS"
+              },
+              {
+                "value": "Calibri",
+                "displayName": "Calibri"
+              },
+              {
+                "value": "Cambria",
+                "displayName": "Cambria"
+              },
+              {
+                "value": "Cambria Math",
+                "displayName": "Cambria Math"
+              },
+              {
+                "value": "Candara",
+                "displayName": "Candara"
+              },
+              {
+                "value": "Comic Sans MS",
+                "displayName": "Comic Sans MS",
+                "font-family": "Comic Sans MS"
+              },
+              {
+                "value": "Consolas",
+                "displayName": "Consolas"
+              },
+              {
+                "value": "Constantia",
+                "displayName": "Constantia"
+              },
+              {
+                "value": "Corbel",
+                "displayName": "Corbel"
+              },
+              {
+                "value": "Courier New",
+                "displayName": "Courier New"
+              },
+              {
+                "value": "Georgia",
+                "displayName": "Georgia"
+              },
+              {
+                "value": "Lucida Sans Unicode",
+                "displayName": "Lucida Sans Unicode"
+              },
+              {
+                "value": "Segoe (Bold)",
+                "displayName": "Segoe (Bold)"
+              },
+              {
+                "value": "Segoe UI",
+                "displayName": "Segoe UI"
+              },
+              {
+                "value": "Segoe UI Light",
+                "displayName": "Segoe UI Light"
+              },
+              {
+                "value": "Symbol",
+                "displayName": "Symbol"
+              },
+              {
+                "value": "Tahoma",
+                "displayName": "Tahoma"
+              },
+              {
+                "value": "Times New Roman",
+                "displayName": "Times New Roman"
+              },
+              {
+                "value": "Trebuchet MS",
+                "displayName": "Trebuchet MS"
+              },
+              {
+                "value": "Verdana",
+                "displayName": "Verdana"
+              },
+              {
+                "value": "Wingdings",
+                "displayName": "Wingdings"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "fonts": {
+      "displayName": "Fonts",
+      "description": "Font properties",
+      "properties": {
+        "fontSize": {
+          "displayName": "MonthYear Font Size",
+          "description": "Change the font size for Month Year title",
+          "type": {
+            "formatting": {
+              "fontSize": true
+            }
+          }
+        },
+        "textSize": {
+          "displayName": "Buttons size",
+          "description": "Change the size for view buttons",
+          "type": {
+            "formatting": {
+              "fontSize": true
+            }
+          }
+        }
+      }
+    },
+    "buttons": {
+      "displayName": "Views",
+      "description": "Settings to show or hide 'week', 'day' and 'list' button",
+      "properties": {
+        "month": {
+          "displayName": "Show month view",
+          "type": {
+            "bool": true
+          }
+        },
+        "week": {
+          "displayName": "Show week view",
+          "type": {
+            "bool": true
+          }
+        },
+        "day": {
+          "displayName": "Show day view",
+          "type": {
+            "bool": true
+          }
+        },
+        "list": {
+          "displayName": "Show list view",
+          "type": {
+            "bool": true
+          }
+        }
+      }
+    },
+    "workHours": {
+      "displayName": "Work hours",
+      "description": "Settings to set work hours for 'week' and 'day' view.",
+      "properties": {
+        "startTime": {
+          "displayName": "Start time",
+          "description": "Select start time",
+          "type": {
+            "enumeration": [
+              {
+                "value": "01:00",
+                "displayName": "01:00 AM"
+              },
+              {
+                "value": "02:00",
+                "displayName": "02:00 AM"
+              },
+              {
+                "value": "03:00",
+                "displayName": "03:00 AM"
+              },
+              {
+                "value": "04:00",
+                "displayName": "04:00 AM"
+              },
+              {
+                "value": "05:00",
+                "displayName": "05:00 AM"
+              },
+              {
+                "value": "06:00",
+                "displayName": "06:00 AM"
+              },
+              {
+                "value": "07:00",
+                "displayName": "07:00 AM"
+              },
+              {
+                "value": "08:00",
+                "displayName": "08:00 AM"
+              },
+              {
+                "value": "09:00",
+                "displayName": "09:00 AM"
+              },
+              {
+                "value": "10:00",
+                "displayName": "10:00 AM"
+              },
+              {
+                "value": "11:00",
+                "displayName": "11:00 AM"
+              },
+              {
+                "value": "12:00",
+                "displayName": "12:00 PM"
+              },
+              {
+                "value": "13:00",
+                "displayName": "01:00 PM"
+              },
+              {
+                "value": "14:00",
+                "displayName": "02:00 PM"
+              },
+              {
+                "value": "15:00",
+                "displayName": "03:00 PM"
+              },
+              {
+                "value": "16:00",
+                "displayName": "04:00 PM"
+              },
+              {
+                "value": "17:00",
+                "displayName": "05:00 PM"
+              },
+              {
+                "value": "18:00",
+                "displayName": "06:00 PM"
+              },
+              {
+                "value": "19:00",
+                "displayName": "07:00 PM"
+              },
+              {
+                "value": "20:00",
+                "displayName": "08:00 PM"
+              },
+              {
+                "value": "21:00",
+                "displayName": "09:00 PM"
+              },
+              {
+                "value": "22:00",
+                "displayName": "10:00 PM"
+              },
+              {
+                "value": "23:00",
+                "displayName": "11:00 PM"
+              },
+              {
+                "value": "00:00",
+                "displayName": "12:00 AM"
+              }
+            ]
+          }
+        },
+        "endTime": {
+          "displayName": "End time",
+          "description": "Select end time",
+          "type": {
+            "enumeration": [
+              {
+                "value": "01:00",
+                "displayName": "01:00 AM"
+              },
+              {
+                "value": "02:00",
+                "displayName": "02:00 AM"
+              },
+              {
+                "value": "03:00",
+                "displayName": "03:00 AM"
+              },
+              {
+                "value": "04:00",
+                "displayName": "04:00 AM"
+              },
+              {
+                "value": "05:00",
+                "displayName": "05:00 AM"
+              },
+              {
+                "value": "06:00",
+                "displayName": "06:00 AM"
+              },
+              {
+                "value": "07:00",
+                "displayName": "07:00 AM"
+              },
+              {
+                "value": "08:00",
+                "displayName": "08:00 AM"
+              },
+              {
+                "value": "09:00",
+                "displayName": "09:00 AM"
+              },
+              {
+                "value": "10:00",
+                "displayName": "10:00 AM"
+              },
+              {
+                "value": "11:00",
+                "displayName": "11:00 AM"
+              },
+              {
+                "value": "12:00",
+                "displayName": "12:00 PM"
+              },
+              {
+                "value": "13:00",
+                "displayName": "01:00 PM"
+              },
+              {
+                "value": "14:00",
+                "displayName": "02:00 PM"
+              },
+              {
+                "value": "15:00",
+                "displayName": "03:00 PM"
+              },
+              {
+                "value": "16:00",
+                "displayName": "04:00 PM"
+              },
+              {
+                "value": "17:00",
+                "displayName": "05:00 PM"
+              },
+              {
+                "value": "18:00",
+                "displayName": "06:00 PM"
+              },
+              {
+                "value": "19:00",
+                "displayName": "07:00 PM"
+              },
+              {
+                "value": "20:00",
+                "displayName": "08:00 PM"
+              },
+              {
+                "value": "21:00",
+                "displayName": "09:00 PM"
+              },
+              {
+                "value": "22:00",
+                "displayName": "10:00 PM"
+              },
+              {
+                "value": "23:00",
+                "displayName": "11:00 PM"
+              },
+              {
+                "value": "00:00",
+                "displayName": "12:00 AM"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "workDays": {
+      "displayName": "Work week",
+      "description": "Set active work days",
+      "properties": {
+        "weekdayMonday": {
+          "displayName": "Monday",
+          "type": {
+            "bool": true
+          }
+        },
+        "weekdayTuesday": {
+          "displayName": "Tuesday",
+          "type": {
+            "bool": true
+          }
+        },
+        "weekdayWednesday": {
+          "displayName": "Wednesday",
+          "type": {
+            "bool": true
+          }
+        },
+        "weekdayThursday": {
+          "displayName": "Thursday",
+          "type": {
+            "bool": true
+          }
+        },
+        "weekdayFriday": {
+          "displayName": "Friday",
+          "type": {
+            "bool": true
+          }
+        },
+        "weekendSaturday": {
+          "displayName": "Saturday",
+          "type": {
+            "bool": true
+          }
+        },
+        "weekendSunday": {
+          "displayName": "Sunday",
+          "type": {
+            "bool": true
+          }
+        }
+      }
+    },
+    "calendarSettings": {
+      "displayName": "Calendar settings",
+      "description": "General calendar settings",
+      "properties": {
+        "startingWeekDay": {
+          "displayName": "Start week on",
+          "description": "Select week name to set start day of the week",
+          "type": {
+            "enumeration": [
+              {
+                "value": "Monday",
+                "displayName": "Monday"
+              },
+              {
+                "value": "Tuesday",
+                "displayName": "Tuesday"
+              },
+              {
+                "value": "Wednesday",
+                "displayName": "Wednesday"
+              },
+              {
+                "value": "Thursday",
+                "displayName": "Thursday"
+              },
+              {
+                "value": "Friday",
+                "displayName": "Friday"
+              },
+              {
+                "value": "Saturday",
+                "displayName": "Saturday"
+              },
+              {
+                "value": "Sunday",
+                "displayName": "Sunday"
+              }
+            ]
+          }
+        },
+        "currentTimeLine": {
+          "displayName": "Show current time",
+          "description": "Show current time line for 'day' and 'week' view",
+          "type": {
+            "bool": true
+          }
+        },
+        "navLink": {
+          "displayName": "Enable navigation link",
+          "description": "Click on 'dates' or 'week Number' to navigate to day or week",
+          "type": {
+            "bool": true
+          }
+        },
+        "weekNumber": {
+          "displayName": "Show week numbers",
+          "description": "Display week number",
+          "type": {
+            "bool": true
+          }
+        },
+        "rtl": {
+          "displayName": "Enable right-to-left layout",
+          "description": "Display calendar orientation from right to left",
+          "type": {
+            "bool": true
+          }
+        }
+      }
+    },
+    "persistCalendarView": {
+      "displayName": "View",
+      "properties": {
+        "calendarView": {
+          "displayName": "Persisted view",
+          "description": "Persist calendar view",
+          "type": {
+            "text": true
+          }
+        }
+      }
+    },
+    "persistCalendarDate": {
+      "displayName": "Date",
+      "properties": {
+        "persistedDate": {
+          "displayName": "Persisted date",
+          "description": "Persist calendar date",
+          "type": {
+            "text": true
+          }
+        }
+      }
+    }
+  },
+  "tooltips": {
+    "supportedTypes": {
+      "default": true,
+      "canvas": true
+    },
+    "roles": [
+      "tooltip"
     ]
+  },
+  "supportsLandingPage": true,
+  "dataViewMappings": [
+    {
+      "conditions": [
+        {
+          "StartDate": {
+            "max": 1
+          },
+          "EndDate": {
+            "max": 1
+          },
+          "events": {
+            "max": 1
+          },
+          "EventGroup": {
+            "max": 1
+          },
+          "EventURL": {
+            "max": 1
+          },
+          "description": {
+          }
+        }
+      ],
+      "categorical": {
+        "categories": {
+          "select": [
+            {
+              "for": {
+                "in": "StartDate"
+              }
+            },
+            {
+              "for": {
+                "in": "EndDate"
+              }
+            },
+            {
+              "for": {
+                "in": "events"
+              }
+            },
+            {
+              "for": {
+                "in": "EventGroup"
+              }
+            },
+            {
+              "for": {
+                "in": "EventURL"
+              }
+            },
+            {
+              "for": {
+                "in": "description"
+              }
+            }
+          ],
+          "dataReductionAlgorithm": {
+            "top": {
+              "count": 30000
+            }
+          }
+        }
+      }
+    }
+  ]
 }

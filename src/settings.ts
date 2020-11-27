@@ -5,8 +5,10 @@ module powerbi.extensibility.visual {
   export class VisualSettings extends DataViewObjectsParser {
 
     public legend: LegendSettings = new LegendSettings();
+    public url: URLSettings = new URLSettings();
     public colorSelector: ColorSelector = new ColorSelector();
     public events: EventSettings = new EventSettings();
+    public fonts: FontSettings = new FontSettings();
     public buttons: ButtonSettings = new ButtonSettings();
     public calendarSettings: CalendarSettings = new CalendarSettings();
     public workHours: WorkHours = new WorkHours();
@@ -24,8 +26,11 @@ module powerbi.extensibility.visual {
     public position: string = 'Top';
     public labelColor: string = '#000000';
     public fontSize: number = 9;
+    public fontFamily: string = 'Arial';
   }
-
+  export class URLSettings {
+    public show: boolean = false;
+  }
   // tslint:disable-next-line:max-classes-per-file
   export class ColorSelector {
     public fill: string = '#ffffff';
@@ -34,8 +39,18 @@ module powerbi.extensibility.visual {
   // tslint:disable-next-line:max-classes-per-file
   export class EventSettings {
     public fontColor: string = '#ffffff';
-    public borderColor: string = '#cccccc';
+      public borderColor: string = '#cccccc';
+      public fontSize: number = 15;
+      public fontFamily: string = 'Arial';
   }
+
+  // tslint:disable-next-line:max-classes-per-file
+  export class FontSettings {
+
+      public fontSize: number = 15;
+      public textSize: number = 15;
+
+    }
 
   // tslint:disable-next-line:max-classes-per-file
   export class ButtonSettings {

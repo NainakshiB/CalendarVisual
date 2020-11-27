@@ -19,6 +19,9 @@
     "node_modules/powerbi-models/dist/models-noexports.d.ts",
     "src/settings.ts",
     "node_modules/fullcalendar/dist/fullcalendar.d.ts",
-    "src/visual.ts"
+    "src/visual.ts",
+    "src/localization/localizationHelper.ts",
+    "src/localization/localizationResources.ts",
+    "src/constant.ts"
   ]
 }
